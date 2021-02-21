@@ -18,7 +18,7 @@ Persistent Memory *NA*
 Virtual Media 
 
 - Management Configuration  Policies
-Device Connector 
+-- Device Connector 
 IPMI over LAN 
 LDAP 
 Local User  *NA*
