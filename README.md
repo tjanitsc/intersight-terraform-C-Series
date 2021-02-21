@@ -118,6 +118,7 @@ terraform apply -var-file=<env_name>.tfvars
 
 ### Additional intersight modules: 
 https://github.com/CiscoDevNet/intersight-terraform-modules
+
 https://github.com/sandkum5/terraform-intersight-hx-edge-deploy
 
 
