@@ -5,7 +5,7 @@ Create Server-profile and associated policies using terraform and assing to a se
 
 Below is a list of what is available in this repo: 
 
--Create Service-Profile 
+- Create Service-Profile 
 
 We can choose the below policies during Service-profile creation: 
 Note: Policies with *NA* at the end are not created yet. Please use the terraform intersight provider for the same. 
