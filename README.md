@@ -1,4 +1,3 @@
-# intersight-terraform-C-Series
 # Intersight UCS C-series configuration using terraform
 * This module creates a UCS C-series Server-profile and its related policies in intersight and assign's to a server based on serial number. 
 * It doesn't deploy the server-profile. That needs to be done manually or change the sp_action variable. 
