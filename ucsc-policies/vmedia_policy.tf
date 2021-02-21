@@ -29,4 +29,8 @@ resource "intersight_vmedia_policy" "vmedia_policy" {
     # cifs options   
     # authentication_protocol = var.vmedia_cifs_auth_protocol
   }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

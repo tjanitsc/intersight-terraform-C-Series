@@ -24,4 +24,8 @@ resource "intersight_networkconfig_policy" "network_conn_policy" {
   # enable_ipv6dns_from_dhcp = var.network_conn_enable_ipv6dns_from_dhcp
   # preferred_ipv6dns_server = var.network_conn_preferred_ipv6dns_server
   # alternate_ipv6dns_server = var.network_conn_alternate_ipv6dns_server
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

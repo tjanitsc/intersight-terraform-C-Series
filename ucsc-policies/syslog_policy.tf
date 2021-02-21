@@ -33,4 +33,8 @@ resource "intersight_syslog_policy" "syslog_policy" {
   #   min_severity = var.syslog_server2_min_severity 
   #   object_type  = "syslog.RemoteLoggingClient"
   # }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

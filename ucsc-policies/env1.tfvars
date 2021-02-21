@@ -129,7 +129,7 @@ snmp_users_privacy_password                = "test12345"
 snmp_traps_enabled                         = false
 snmp_traps_nr_version                      = "V3" # Options: V3, V2 
 snmp_traps_user                            = "test"
-snmp_tra                                   = "Trap" # Options: Trap, Inform 
+snmp_trap                                  = "Trap" # Options: Trap, Inform 
 snmp_traps_destination                     = "10.10.10.10"
 snmp_traps_port                            = 162 # Range: 1-65535 
 

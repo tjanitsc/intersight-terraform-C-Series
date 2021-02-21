@@ -38,4 +38,8 @@ resource "intersight_snmp_policy" "snmp_policy" {
     user        = var.snmp_traps_user
     nr_version  = var.snmp_traps_nr_version
   }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

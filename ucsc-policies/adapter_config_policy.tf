@@ -47,4 +47,8 @@ resource "intersight_adapter_config_policy" "adapter_config_policy" {
       interface_id = 3
     }
   }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

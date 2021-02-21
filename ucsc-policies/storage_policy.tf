@@ -29,4 +29,8 @@ resource "intersight_storage_storage_policy" "storage_policy" {
     write_policy        = var.storage_vd_write_policy        # "WriteThrough"
     disk_group_policy   = intersight_storage_disk_group_policy.disk_group_policy.moid
   }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

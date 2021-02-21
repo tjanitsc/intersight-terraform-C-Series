@@ -16,5 +16,8 @@ resource "intersight_ipmioverlan_policy" "ipmi_over_lan_policy" {
   enabled        = var.ipmi_over_lan_enabled
   privilege      = var.ipmi_over_lan_privilege
   encryption_key = var.ipmi_over_lan_encryption_key
-
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

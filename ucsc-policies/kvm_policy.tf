@@ -18,4 +18,8 @@ resource "intersight_kvm_policy" "kvm_policy" {
   enable_video_encryption   = var.kvm_policy_enable_video_encryption
   remote_port               = var.kvm_policy_remote_port
   enable_local_server_video = var.kvm_policy_enable_local_server_video
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

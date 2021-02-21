@@ -14,4 +14,8 @@ resource "intersight_deviceconnector_policy" "dc_policy" {
     value = var.tags.value2
   }
   lockout_enabled = var.dc_lockout_enabled
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }

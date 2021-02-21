@@ -31,6 +31,10 @@ resource "intersight_boot_precision_policy" "boot_policy" {
       subtype = "cimc-mapped-dvd"
     })
   }
+  profiles {
+    moid        = intersight_server_profile.server1.id
+    object_type = "server.Profile"
+  }
 }
 
 
