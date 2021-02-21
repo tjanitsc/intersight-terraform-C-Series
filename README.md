@@ -8,7 +8,7 @@ Below is a list of what is available in this repo:
 - Create Service-Profile 
 
 We can choose the below policies during Service-profile creation: 
-Note: Policies with *NA* at the end are not created yet. Please use the terraform intersight provider for the same. 
+  - Note: Policies with *NA* at the end are not created yet. Please use the terraform intersight provider for the same. 
 
 - Compute Configuration  Policies
   - BIOS
