@@ -3,7 +3,7 @@ resource "intersight_vnic_eth_adapter_policy" "vnic_eth_adapter_policy" {
   description = "${var.prefix} VNIC ETH Adapter Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

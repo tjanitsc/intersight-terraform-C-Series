@@ -3,7 +3,7 @@ resource "intersight_vmedia_policy" "vmedia_policy" {
   description = "${var.prefix} VMedia Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

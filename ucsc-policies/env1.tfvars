@@ -4,6 +4,7 @@ api_key                                    = "<your_api_key>"
 secret_key                                 = "SecretKey.txt"  # SecretKey.txt file in the directory you have the .tf files. 
 endpoint                                   = "https://intersight.com"
 # Common
+org_name                                   = "default"
 # Tags
 tag_key1                                   = "ENV"
 tag_value1                                 = "LAB"

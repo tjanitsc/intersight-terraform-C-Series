@@ -3,7 +3,7 @@ resource "intersight_smtp_policy" "smtp_policy" {
   description = "${var.prefix} SMTP Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

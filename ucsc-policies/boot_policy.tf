@@ -5,7 +5,7 @@ resource "intersight_boot_precision_policy" "boot_policy" {
   enforce_uefi_secure_boot = var.boot_enforce_uefi_secure_boot
   organization {
     object_type = "organization.Organization"
-    # moid = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

@@ -3,7 +3,7 @@ resource "intersight_ipmioverlan_policy" "ipmi_over_lan_policy" {
   description = "${var.prefix} ipmi_over_lan policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

@@ -3,7 +3,7 @@ resource "intersight_ntp_policy" "ntp_policy" {
   description = "${var.prefix} NTP Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

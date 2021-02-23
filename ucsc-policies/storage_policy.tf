@@ -4,7 +4,7 @@ resource "intersight_storage_storage_policy" "storage_policy" {
   description = "${var.prefix} Storage Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

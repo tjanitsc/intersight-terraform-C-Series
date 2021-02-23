@@ -3,7 +3,7 @@ resource "intersight_vnic_fc_adapter_policy" "vnic_fc_adapter_policy" {
   description = "${var.prefix} VNIC FC Adapter Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.organization
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

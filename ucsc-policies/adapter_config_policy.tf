@@ -3,7 +3,7 @@ resource "intersight_adapter_config_policy" "adapter_config_policy" {
   description = "${var.prefix} Adapter Config policy"
   organization {
     object_type = "organization.Organization"
-    # moid = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

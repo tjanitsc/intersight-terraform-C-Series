@@ -3,7 +3,7 @@ resource "intersight_vnic_lan_connectivity_policy" "vnic_lan_conn_policy" {
   description = "${var.prefix} VNIC LAN Conn Policy"
   organization {
     object_type = "organization.Organization"
-    # moid        = var.org_moid
+    moid        = data.intersight_organization_organization.org_data.moid
   }
   tags {
     key   = var.tags.key1

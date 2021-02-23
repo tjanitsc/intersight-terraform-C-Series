@@ -16,10 +16,6 @@ variable "endpoint" {
   description = "Intersight URL"
   default     = "https://intersight.com"
 }
-# variable "org_moid" {
-#   type        = string
-#   description = ""
-# }
 
 variable "prefix" {
   type        = string
@@ -28,6 +24,12 @@ variable "prefix" {
 }
 
 # Common
+# Org Details
+variable "org_name" {
+  type        = string
+  description = "Name of the Org where you want to create the resource"
+}
+
 # Tags
 variable "tags" {
   type = map(string)
