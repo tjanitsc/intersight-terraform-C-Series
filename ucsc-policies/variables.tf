@@ -30,6 +30,11 @@ variable "org_name" {
   description = "Name of the Org where you want to create the resource"
 }
 
+variable "server_serial" {
+  type = string 
+  description = "Specify the Server serial"
+}
+
 # Tags
 variable "tags" {
   type = map(string)

@@ -5,6 +5,8 @@ secret_key                                 = "SecretKey.txt"  # SecretKey.txt fi
 endpoint                                   = "https://intersight.com"
 # Common
 org_name                                   = "default"
+server_serial                              = "$filter=Serial eq 'xxxxxx'"
+
 # Tags
 tag_key1                                   = "ENV"
 tag_value1                                 = "LAB"

@@ -13,10 +13,10 @@ resource "intersight_server_profile" "server1" {
     key   = var.tags.key2
     value = var.tags.value2
   }
-  target_platform = var.sp_target_platform # Standalone, FIAttached  
+  target_platform = var.sp_target_platform 
   action          = var.sp_action
   assigned_server {
     object_type = "compute.RackUnit"
-    selector    = "$filter=Serial eq 'WZP210909JW'"
+    selector    = var.server_serial
   }
 }
