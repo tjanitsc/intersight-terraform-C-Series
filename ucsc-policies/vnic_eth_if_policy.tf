@@ -42,4 +42,5 @@ resource "intersight_vnic_eth_if" "vnic_eth_if_policy" {
   eth_qos_policy {
     moid = intersight_vnic_eth_qos_policy.vnic_eth_qos_policy.id
   }
+  depends_on = [intersight_vnic_lan_connectivity_policy.vnic_lan_conn_policy, intersight_vnic_eth_network_policy.vnic_eth_network_policy, intersight_vnic_eth_adapter_policy.vnic_eth_adapter_policy, intersight_vnic_eth_qos_policy.vnic_eth_qos_policy]
 }

@@ -39,7 +39,7 @@ resource "intersight_snmp_policy" "snmp_policy" {
     nr_version  = var.snmp_traps_nr_version
   }
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

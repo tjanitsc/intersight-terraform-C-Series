@@ -18,7 +18,7 @@ resource "intersight_sol_policy" "sol_policy" {
   baud_rate = var.sol_baud_rate
   ssh_port  = var.sol_ssh_port
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

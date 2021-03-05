@@ -16,9 +16,9 @@ resource "intersight_vnic_eth_qos_policy" "vnic_eth_qos_policy" {
   mtu            = var.vnic_eth_qos_mut
   rate_limit     = var.vnic_eth_qos_rate_limit
   trust_host_cos = var.vnic_eth_qos_trust_host_cos
-  # C-series only
+  # Applicable for C-series 
   cos = var.vnic_eth_qos_cos # number, range: 0-6 
-  # B-series only
-  # burst = var.vnic_eth_qos_burst 
-  # priority = var.vnic_eth_qos_priority
+  # Applicable for B-series
+  burst    = var.vnic_eth_qos_burst
+  priority = var.vnic_eth_qos_priority
 }

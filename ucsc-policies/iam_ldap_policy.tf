@@ -36,7 +36,7 @@ resource "intersight_iam_ldap_policy" "iam_ldap_policy" {
     search_domain = var.ldap_dns_parameters_search_domain
   }
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

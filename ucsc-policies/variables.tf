@@ -31,7 +31,7 @@ variable "org_name" {
 }
 
 variable "server_serial" {
-  type = string 
+  type        = string
   description = "Specify the Server serial"
 }
 
@@ -286,22 +286,21 @@ variable "network_conn_enable_ipv6" {
   description = "If enabled, allows to configure IPv6 properties."
   default     = false
 }
-
-# variable "network_conn_enable_ipv6dns_from_dhcp" {
-#   type        = bool
-#   description = "If enabled, Cisco IMC retrieves the DNS server addresses from DHCP. Use DHCP field must be enabled for IPv6 in Cisco IMC to enable it."
-#   default     = false
-# }
-# variable "network_conn_preferred_ipv6dns_server" {
-#   type        = string
-#   description = "IP address of the primary DNS server."
-#   default     = "::"
-# }
-# variable "network_conn_alternate_ipv6dns_server" {
-#   type        = string
-#   description = "IP address of the secondary DNS server."
-#   default     = "::"
-# }
+variable "network_conn_enable_ipv6dns_from_dhcp" {
+  type        = bool
+  description = "If enabled, Cisco IMC retrieves the DNS server addresses from DHCP. Use DHCP field must be enabled for IPv6 in Cisco IMC to enable it."
+  default     = false
+}
+variable "network_conn_preferred_ipv6dns_server" {
+  type        = string
+  description = "IP address of the primary DNS server."
+  default     = "::"
+}
+variable "network_conn_alternate_ipv6dns_server" {
+  type        = string
+  description = "IP address of the secondary DNS server."
+  default     = "::"
+}
 
 
 # ntp_policy
@@ -321,16 +320,16 @@ variable "ntp_server_2" {
   description = "NTP Server IP"
   default     = "1.1.1.2"
 }
-# variable "ntp_server_3" {
-#   type        = string
-#   description = "NTP Server IP"
-#   default     = "x.x.x.x"
-# }
-# variable "ntp_server_4" {
-#   type        = string
-#   description = "NTP Server IP"
-#   default     = "x.x.x.x"
-# }
+variable "ntp_server_3" {
+  type        = string
+  description = "NTP Server IP"
+  default     = "x.x.x.x"
+}
+variable "ntp_server_4" {
+  type        = string
+  description = "NTP Server IP"
+  default     = "x.x.x.x"
+}
 variable "ntp_policy_timezone" {
   type        = string
   description = "Timezone of services on the endpoint."
@@ -376,16 +375,16 @@ variable "smtp_receipients_email_2" {
   description = "Mail receiver email-id"
   default     = "abc2@receiver.com"
 }
-# variable "smtp_receipients_email_3" {
-#   type        = string
-#   description = "Mail receiver email-id"
-#   default     = ""
-# }
-# variable "smtp_receipients_email_4" {
-#   type        = string
-#   description = "Mail receiver email-id"
-#   default     = ""
-# }
+variable "smtp_receipients_email_3" {
+  type        = string
+  description = "Mail receiver email-id"
+  default     = ""
+}
+variable "smtp_receipients_email_4" {
+  type        = string
+  description = "Mail receiver email-id"
+  default     = ""
+}
 
 
 # snmp_policy
@@ -821,7 +820,6 @@ variable "vnic_eth_network_vlan_default" {
 
 
 # vnic_eth_qos_policy
-
 variable "vnic_eth_qos_mut" {
   type        = number
   description = "The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."
@@ -842,18 +840,17 @@ variable "vnic_eth_qos_cos" {
   description = "Class of Service to be associated to the traffic on the virtual interface."
   default     = 0 # Options: 0-6 
 }
-
-# Only B-series 
-# variable "vnic_eth_qos_burst" {
-#   type = number
-#   description = "The burst traffic, in bytes, allowed on the vNIC."
-#   default = 1024 # Range: 1024-1000000
-# }
-# variable "vnic_eth_qos_priority" {
-#   type = string 
-#   description = "The priortity matching the System QoS specified in the fabric profile"
-#   default = "Best Effort" # Best Effort, FC, Platinum, Gold, Silver, Bronze,
-# }
+# Applicable for B-series 
+variable "vnic_eth_qos_burst" {
+  type        = number
+  description = "The burst traffic, in bytes, allowed on the vNIC."
+  default     = 1024 # Range: 1024-1000000
+}
+variable "vnic_eth_qos_priority" {
+  type        = string
+  description = "The priortity matching the System QoS specified in the fabric profile"
+  default     = "Best Effort" # Best Effort, FC, Platinum, Gold, Silver, Bronze,
+}
 
 
 
@@ -884,3 +881,4 @@ variable "sp_target_platform" {
 #   description = ""
 #   default     = ""
 # }
+

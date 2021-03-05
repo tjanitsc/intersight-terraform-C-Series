@@ -17,12 +17,12 @@ resource "intersight_ntp_policy" "ntp_policy" {
   ntp_servers = [
     var.ntp_server_1,
     var.ntp_server_2,
-    # var.ntp_server_3,
-    # var.ntp_server_4
+    var.ntp_server_3,
+    var.ntp_server_4
   ]
   timezone = var.ntp_policy_timezone
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

@@ -16,7 +16,7 @@ resource "intersight_bios_policy" "bios_policy" {
   cpu_power_management = "performance"
   serial_port_aenable  = "enabled"
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

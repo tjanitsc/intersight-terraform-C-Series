@@ -26,7 +26,7 @@ resource "intersight_smtp_policy" "smtp_policy" {
     # var.smtp_receipients_email_4
   ]
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

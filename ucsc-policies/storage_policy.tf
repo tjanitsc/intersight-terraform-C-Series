@@ -30,7 +30,7 @@ resource "intersight_storage_storage_policy" "storage_policy" {
     disk_group_policy   = intersight_storage_disk_group_policy.disk_group_policy.moid
   }
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

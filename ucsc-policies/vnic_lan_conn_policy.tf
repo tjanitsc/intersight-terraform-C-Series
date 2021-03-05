@@ -15,7 +15,7 @@ resource "intersight_vnic_lan_connectivity_policy" "vnic_lan_conn_policy" {
   }
   target_platform = var.vnic_lan_conn_target_platform # Standalone, FIAttached
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

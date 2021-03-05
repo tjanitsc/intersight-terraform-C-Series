@@ -17,7 +17,7 @@ resource "intersight_ssh_policy" "ssh_policy" {
   port    = var.ssh_port    # number, range: 1-65535 
   timeout = var.ssh_timeout # range 60-10800 
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

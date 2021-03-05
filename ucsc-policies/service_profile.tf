@@ -1,4 +1,4 @@
-resource "intersight_server_profile" "server1" {
+resource "intersight_server_profile" "server_profile" {
   name        = "${var.prefix}_profile"
   description = "${var.prefix} Server Profile"
   organization {
@@ -13,7 +13,7 @@ resource "intersight_server_profile" "server1" {
     key   = var.tags.key2
     value = var.tags.value2
   }
-  target_platform = var.sp_target_platform 
+  target_platform = var.sp_target_platform
   action          = var.sp_action
   assigned_server {
     object_type = "compute.RackUnit"

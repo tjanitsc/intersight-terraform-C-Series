@@ -34,7 +34,7 @@ resource "intersight_syslog_policy" "syslog_policy" {
   #   object_type  = "syslog.RemoteLoggingClient"
   # }
   profiles {
-    moid        = intersight_server_profile.server1.id
+    moid        = intersight_server_profile.server_profile.moid
     object_type = "server.Profile"
   }
 }

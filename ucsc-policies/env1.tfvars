@@ -5,11 +5,7 @@ secret_key                                 = "SecretKey.txt"  # SecretKey.txt fi
 endpoint                                   = "https://intersight.com"
 # Common
 org_name                                   = "default"
-server_serial                              = "$filter=Serial eq 'xxxxxx'"
-
-# Tags
-tag_key1                                   = "ENV"
-tag_value1                                 = "LAB"
+server_serial                              = "$filter=Serial eq 'xxxxxx'" # << Replace xxxx with the server serial. Else, need to comment out this from variables.tf and service_profile.tf file
 
 # org_moid = ""
 prefix                                     = "tf_sj"
@@ -87,17 +83,17 @@ network_conn_preferred_ipv4dns_server      = "8.8.8.8"
 network_conn_alternate_ipv4dns_server      = "4.2.2.2"
 ## IPv6 Settings
 network_conn_enable_ipv6                   = false
-#  network_conn_enable_ipv6dns_from_dhcp     = false
-#  network_conn_preferred_ipv6dns_server     = "::"
-#  network_conn_alternate_ipv6dns_server     = "::"
+network_conn_enable_ipv6dns_from_dhcp      = false
+network_conn_preferred_ipv6dns_server      = "::"
+network_conn_alternate_ipv6dns_server      = "::"
 
 # ntp_policy
 ## Max 4 NTP servers can be added. Modify ntp_policy.tf to add more NTP servesr. 
 ntp_policy_enabled                         = true
 ntp_server_1                               = "1.1.1.1"
 ntp_server_2                               = "1.1.1.2"
-# ntp_server_3                               = "x.x.x.x"
-# ntp_server_4                               = "x.x.x.x"
+ntp_server_3                               = ""
+ntp_server_4                               = ""
 ntp_policy_timezone                        = "America/Los_Angeles"
 
 # smtp_policy 
@@ -109,8 +105,8 @@ smtp_min_severity                          = "critical" # condition/informationa
 smtp_sender_email                          = "abc@sender.com"
 smtp_receipients_email_1                   = "abc1@receiver.com"
 smtp_receipients_email_2                   = "abc2@receiver.com"
-# smtp_receipients_email_3                   = ""
-# smtp_receipients_email_4                   = ""
+smtp_receipients_email_3                   = ""
+smtp_receipients_email_4                   = ""
 
 # snmp_policy
 snmp_enabled                               = true
@@ -124,15 +120,15 @@ snmp_engine_id                             = "" #   Platforms: Standalone
 ## SNMP Users Info Per User
 snmp_users_name                            = "test"
 snmp_users_security_level                  = "AuthPriv" # Options: AuthPriv, AuthNoPriv
-snmp_users_au                              = "SHA" # Options: MD5, SHA
+snmp_users_auth_type                       = "SHA" # Options: MD5, SHA
 snmp_users_auth_password                   = "test12345"
-snmp_users_priva                           = "AES"
+snmp_users_privacy_type                    = "AES"
 snmp_users_privacy_password                = "test12345"
 ## SNMP Trap Destinations 
 snmp_traps_enabled                         = false
 snmp_traps_nr_version                      = "V3" # Options: V3, V2 
 snmp_traps_user                            = "test"
-snmp_trap                                  = "Trap" # Options: Trap, Inform 
+snmp_traps_type                            = "Trap" # Options: Trap, Inform 
 snmp_traps_destination                     = "10.10.10.10"
 snmp_traps_port                            = 162 # Range: 1-65535 
 
@@ -215,7 +211,7 @@ vnic_eth_if_vmq_enabled                    = false
 # vnic_eth_network_policy
 vnic_eth_network_target_platform           = "Standalone" # options: Standalone, FIAttached
 vnic_eth_network_vlan_mode                 = "ACCESS" # Options: ACCESS, TRUNK 
-vnic_eth_netwo                             = 1 # Options: 0-4094
+vnic_eth_network_vlan_default              = 1 # Options: 0-4094
 
 # vnic_eth_qos_policy
 vnic_eth_qos_mut                           = 9000 # Range: 1500-9000
