@@ -228,3 +228,14 @@ vnic_lan_conn_target_platform              = "Standalone" # Options: Standalone,
 # service_profile 
 sp_action                                  = "No-op" # Options: # Deploy, Unassign
 sp_target_platform                         = "Standalone" # Options: Standalone, FIAttached
+
+#vnic_fc_if_policy
+fc_vhba_type                               = "fc-initiator"
+fc_vhba_slot_id                            = "MLOM"
+fc_vhba_uplink                             = 0
+fc_vhha_pci_link                           = 0
+fc_vhba_pci_order                          = 2
+fc_vhba_persistent_bindings                = false
+
+# vnic_san_conn_policy
+vnic_san_conn_target_platform              = "Standalone"

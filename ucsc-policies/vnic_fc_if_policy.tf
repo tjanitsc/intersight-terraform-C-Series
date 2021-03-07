@@ -8,14 +8,14 @@ resource "intersight_vnic_fc_if" "vnic_fc_if" {
     key   = var.tags.key2
     value = var.tags.value2
   }
-  order               = var.fc_vhba_order
-  persistent_bindings = var.fc_vhba_persistent_bindings
+  type = var.fc_vhba_type
   placement {
     id       = var.fc_vhba_slot_id
-    pci_link = var.fc_vhha_pci_link
     uplink   = var.fc_vhba_uplink
+    pci_link = var.fc_vhha_pci_link
   }
-  type = var.fc_vhba_type
+  order               = var.fc_vhba_pci_order
+  persistent_bindings = var.fc_vhba_persistent_bindings
   fc_adapter_policy {
     moid = intersight_vnic_fc_adapter_policy.vnic_fc_adapter_policy.moid
   }
