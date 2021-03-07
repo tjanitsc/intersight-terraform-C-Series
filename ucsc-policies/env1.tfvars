@@ -175,7 +175,7 @@ syslog_server1_min_severity                = "emergency" # options: warning, eme
 vmedia_enabled                             = true
 vmedia_encryption                          = true
 vmedia_low_power_usb                       = true
-vmedia_devi                                = "cdd" # Options: cdd, hdd 
+vmedia_device_type                         = "cdd" # Options: cdd, hdd 
 vmedia_mount_protocol                      = "https" # options: nfs, cifs, https 
 ## http/https/CIFS/NFS options 
 vmedia_volume_name                         = "esxi67"

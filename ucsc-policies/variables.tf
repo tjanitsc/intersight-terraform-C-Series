@@ -875,6 +875,45 @@ variable "sp_target_platform" {
 }
 
 
+#vnic_fc_if_policy
+# At a minimum two vHBAs are required named fc0 and fc1.
+# name = Name of the virtual fibre channel interface.
+variable "fc_vhba_type" {
+  type        = string
+  description = "vHBA Type configuration for SAN Connectivity Policy. This configuration is supported only on Cisco VIC 14XX series and higher series of adapters."
+  default     = "fc-initiator" # fc-initiator, fc-nvme-initiator, fc-nvme-target, fc-target
+}
+variable "fc_vhba_slot_id" {
+  type        = string
+  description = "PCIe Slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."
+  default     = "MLOM"
+}
+variable "fc_vhba_uplink" {
+  type        = number
+  description = "Adapter port on which the virtual interface will be created."
+  default     = 0
+}
+variable "fc_vhha_pci_link" {
+  type        = number
+  description = "The PCI Link used as transport for the virtual interface. All VIC adapters have a single PCI link except VIC 1385 which has two."
+  default     = 0
+}
+variable "fc_vhba_pci_order" {
+  type        = number
+  description = "The order in which the virtual interface is brought up. The order assigned to an interface should be unique for all the Ethernet and Fibre-Channel interfaces on each PCI link on a VIC adapter. The maximum value of PCI order is limited by the number of virtual interfaces (Ethernet and Fibre-Channel) on each PCI link on a VIC adapter. All VIC adapters have a single PCI link except VIC 1385 which has two."
+}
+variable "fc_vhba_persistent_bindings" {
+  type        = bool
+  description = "Enables retention of LUN ID associations in memory until they are manually cleared."
+  default     = false
+}
+
+# vnic_san_conn_policy
+variable "vnic_san_conn_target_platform" {
+  type        = string
+  description = "The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight."
+  default     = "Standalone"
+}
 
 # variable "name" {
 #   type        = string
