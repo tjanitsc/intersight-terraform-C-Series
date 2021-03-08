@@ -7,21 +7,21 @@ pipeline {
       }
     }
 
-    stage('Change Dir') {
-      steps {
-        dir(path: 'ucsc-policies')
-      }
-    }
-
     stage('Terraform Init') {
       steps {
-        sh 'terraform init'
+        dir(path: 'ucsc-policies') {
+          sh 'terraform init'
+        }
+
       }
     }
 
     stage('Terraform plan ') {
       steps {
-        sh 'terraform plan -var-file=env1.tfvars'
+        dir(path: 'ucsc-policies') {
+          sh 'terraform plan -var-file=env1.tfvars'
+        }
+
       }
     }
 
