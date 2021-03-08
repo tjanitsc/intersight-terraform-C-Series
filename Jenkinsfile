@@ -19,7 +19,7 @@ pipeline {
     stage('Terraform plan ') {
       steps {
         dir(path: 'ucsc-policies') {
-          sh 'terraform plan -var-file=env1.tfvars'
+          sh 'terraform apply -var-file=env1.tfvars -auto-approve'
         }
 
       }
