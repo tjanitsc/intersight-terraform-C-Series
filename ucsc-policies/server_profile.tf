@@ -15,8 +15,8 @@ resource "intersight_server_profile" "server_profile" {
   }
   target_platform = var.sp_target_platform
   action          = var.sp_action
-  assigned_server {
-    object_type = "compute.RackUnit"
-    selector    = var.server_serial
-  }
+  # assigned_server {
+  #   object_type = "compute.RackUnit"
+  #   selector    = var.server_serial
+  # }
 }

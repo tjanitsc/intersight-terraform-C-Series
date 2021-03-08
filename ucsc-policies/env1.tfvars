@@ -5,7 +5,7 @@ secret_key                                 = "SecretKey.txt"  # SecretKey.txt fi
 endpoint                                   = "https://intersight.com"
 # Common
 org_name                                   = "default"
-server_serial                              = "$filter=Serial eq 'xxxxxx'" # << Replace xxxx with the server serial. Else, need to comment out this from variables.tf and service_profile.tf file
+# server_serial                              = "$filter=Serial eq 'xxxxxx'" # << Replace xxxx with the server serial. Else, need to comment out this from variables.tf and service_profile.tf file
 
 # org_moid = ""
 prefix                                     = "tf_sj"
