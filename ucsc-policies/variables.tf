@@ -909,11 +909,11 @@ variable "fc_vhba_persistent_bindings" {
 }
 
 # vnic_san_conn_policy
-# variable "vnic_san_conn_target_platform" {
-#   type        = string
-#   description = "The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight."
-#   default     = "Standalone"
-# }
+variable "vnic_san_conn_target_platform" {
+  type        = string
+  description = "The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight."
+  default     = "Standalone"
+}
 
 # variable "name" {
 #   type        = string
