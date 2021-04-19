@@ -92,8 +92,8 @@ network_conn_alternate_ipv6dns_server      = "::"
 ntp_policy_enabled                         = true
 ntp_server_1                               = "1.1.1.1"
 ntp_server_2                               = "1.1.1.2"
-ntp_server_3                               = ""
-ntp_server_4                               = ""
+# ntp_server_3                               = ""
+# ntp_server_4                               = ""
 ntp_policy_timezone                        = "America/Los_Angeles"
 
 # smtp_policy 
