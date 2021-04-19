@@ -4,7 +4,7 @@ resource "intersight_iam_ldap_policy" "iam_ldap_policy" {
   description = "${var.prefix} LDAP policy"
   organization {
     object_type = "organization.Organization"
-    moid        = data.intersight_organization_organization.org_data.moid
+    moid        = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
     key   = var.tags.key1

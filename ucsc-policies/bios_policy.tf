@@ -3,7 +3,7 @@ resource "intersight_bios_policy" "bios_policy" {
   description = "${var.prefix} BIOS Policy"
   organization {
     object_type = "organization.Organization"
-    moid        = data.intersight_organization_organization.org_data.moid
+    moid        = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
     key   = var.tags.key1

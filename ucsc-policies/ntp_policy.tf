@@ -3,7 +3,7 @@ resource "intersight_ntp_policy" "ntp_policy" {
   description = "${var.prefix} NTP Policy"
   organization {
     object_type = "organization.Organization"
-    moid        = data.intersight_organization_organization.org_data.moid
+    moid        = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
     key   = var.tags.key1
@@ -16,9 +16,7 @@ resource "intersight_ntp_policy" "ntp_policy" {
   enabled = var.ntp_policy_enabled
   ntp_servers = [
     var.ntp_server_1,
-    var.ntp_server_2,
-    var.ntp_server_3,
-    var.ntp_server_4
+    var.ntp_server_2
   ]
   timezone = var.ntp_policy_timezone
   profiles {

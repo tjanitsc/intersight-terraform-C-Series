@@ -8,7 +8,7 @@ variable "api_key" {
 variable "secret_key" {
   type        = string
   description = "Intersight Secret Key file"
-  default     = "SecretKey.txt"
+  default     = "../../../SecretKey.txt"
 }
 
 variable "endpoint" {
@@ -220,7 +220,6 @@ variable "ipmi_over_lan_encryption_key" {
   description = "The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."
   default     = "69706d69313233" # ascii: ipmi123
 }
-
 
 # kvm_policy
 variable "kvm_policy_enabled" {

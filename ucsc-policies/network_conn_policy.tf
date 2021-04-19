@@ -3,7 +3,7 @@ resource "intersight_networkconfig_policy" "network_conn_policy" {
   description = "${var.prefix} Network Connectivity Policy"
   organization {
     object_type = "organization.Organization"
-    moid        = data.intersight_organization_organization.org_data.moid
+    moid        = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
     key   = var.tags.key1

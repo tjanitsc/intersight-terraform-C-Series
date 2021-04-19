@@ -3,7 +3,7 @@ resource "intersight_storage_disk_group_policy" "disk_group_policy" {
   description = "${var.prefix} Disk Group Policy"
   organization {
     object_type = "organization.Organization"
-    moid        = data.intersight_organization_organization.org_data.moid
+    moid        = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
     key   = var.tags.key1
