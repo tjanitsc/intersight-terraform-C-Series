@@ -54,7 +54,7 @@ We can choose the below policies during Service-profile creation:
 * Clone the repository
 ```txt
 git clone https://github.com/sandkum5/intersight-terraform-C-Series.git
-cd ucsc-policies
+cd intersight-terraform-C-Series/ucsc-policies
 ```
 
 * Copy the SecretKye.txt file in the hx-edge directory. 
