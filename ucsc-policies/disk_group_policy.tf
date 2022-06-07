@@ -1,4 +1,4 @@
-resource "intersight_storage_disk_group_policy" "disk_group_policy" {
+resource "intersight_storage_drive_group" "drive_group_policy" {
   name        = "${var.prefix}_disk_group_policy"
   description = "${var.prefix} Disk Group Policy"
   organization {
