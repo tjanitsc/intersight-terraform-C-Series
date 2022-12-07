@@ -1,5 +1,4 @@
 resource "intersight_storage_storage_policy" "storage_policy" {
-  depends_on  = [intersight_storage_disk_group_policy.disk_group_policy]
   name        = "${var.prefix}_storage_policy"
   description = "${var.prefix} Storage Policy"
   organization {
