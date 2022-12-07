@@ -13,3 +13,4 @@ provider "intersight" {
   secretkey = var.secret_key
   endpoint  = var.endpoint
 }
+
