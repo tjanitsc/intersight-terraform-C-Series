@@ -9,15 +9,5 @@ resource "intersight_storage_drive_group" "drive_group_policy" {
     value = var.tags.value2
   }
   raid_level = var.disk_group_raid_level
-  span_groups {
-    disks {
-      slot_number = 1
-    }
-    disks {
-      slot_number = 2
-    }
-  }
-  dedicated_hot_spares {
-    slot_number = 3
-  }
+  
 }
